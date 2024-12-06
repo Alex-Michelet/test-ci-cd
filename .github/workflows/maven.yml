@@ -47,6 +47,3 @@ jobs:
           push: true
           tags: rg.fr-par.scw.cloud/polytech-2024/michelet/backend-image:v1
           context: .
-
-
-
