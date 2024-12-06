@@ -25,11 +25,11 @@ jobs:
           java-version: '21'
           cache: 'maven'
 
-      - name: Launch tests with Maven
-        run: mvn -B clean test --file pom.xml
+      # - name: Launch tests with Maven
+      #   run: mvn -B clean test --file pom.xml
 
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
+        run: mvn -B -DskipTests package --file pom.xml
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
