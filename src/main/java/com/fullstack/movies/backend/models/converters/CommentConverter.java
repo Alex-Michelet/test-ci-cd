@@ -10,9 +10,6 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class CommentConverter implements Converter<Comment, CommentDto> {
 
-    private final MovieConverter movieConverter;
-    private final UserConverter userConverter;
-
     @Override
     public CommentDto convert(Comment comment) {
         return CommentDto.builder()

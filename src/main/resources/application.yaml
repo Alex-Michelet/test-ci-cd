@@ -6,9 +6,10 @@ spring:
   datasource:
 #    url: jdbc:h2:mem:moviedb
 #    url: jdbc:h2:file:./data/moviedb
+    # url: jdbc:postgresql://host.docker.internal:5432/movie-database
     url: jdbc:postgresql://localhost:5432/moviedb
-    username: username
-    password: password
+    username: bidon
+    password: bidon
 #    driverClassName: org.h2.Driver
     driverClassName: org.postgresql.Driver
   jpa:

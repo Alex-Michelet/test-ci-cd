@@ -1,0 +1,22 @@
+services: 
+  fullstack-courses-movie-database:
+    container_name: movie-database
+    image: postgres:16.4
+    ports:
+      - 5432:5432
+    volumes:
+      - movie-database:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: moviedb
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+
+  fullstack-courses-backend-server:
+    container_name: backend-server
+    image: backend-server-image
+    ports:
+      - 8080:8080
+
+
+volumes:
+  movie-database:
